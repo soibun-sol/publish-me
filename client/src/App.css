@@ -1,0 +1,108 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2b6cb0;
+}
+
+.header nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: #4a5568;
+  transition: color 0.3s;
+}
+
+.header a:hover {
+  color: #2b6cb0;
+}
+
+.login-btn {
+  padding: 0.5rem 1.5rem;
+  background: white;
+  border: 2px solid #2b6cb0;
+  border-radius: 4px;
+  color: #2b6cb0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-btn:hover {
+  background: #2b6cb0;
+  color: white;
+}
+
+/* Hero Styles */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f7fafc 0%, #ebf4ff 100%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #4a5568;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 1rem 2.5rem;
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #1e4e8c;
+}
+
+/* Footer Styles */
+.footer {
+  padding: 1.5rem;
+  text-align: center;
+  background: #1a365d;
+  color: white;
+}
