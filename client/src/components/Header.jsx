@@ -1,16 +1,28 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../assets/css/Header.css';
 
 export default function Header() {
   const [showCategories, setShowCategories] = useState(false);
   const [showFeatures, setShowFeatures] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const navigate = useNavigate();
+
+  const handleAuthorLogin = () => {
+    navigate('/author-login');
+    setShowLogin(false);
+  };
+
+  const handleReaderLogin = () => {
+    navigate('/reader-login');
+    setShowLogin(false);
+  };
 
   return (
     <header className="header">
       <div className="logo">BookCraft</div>
       <nav>
-        {/* Features Dropdown - Positioned under button */}
+        {/* Features Dropdown */}
         <div 
           className="features-dropdown"
           onMouseEnter={() => setShowFeatures(true)}
@@ -35,7 +47,7 @@ export default function Header() {
           )}
         </div>
 
-        {/* Categories Dropdown - unchanged */}
+        {/* Categories Dropdown */}
         <div 
           className="categories-dropdown"
           onMouseEnter={() => setShowCategories(true)}
@@ -53,7 +65,7 @@ export default function Header() {
           )}
         </div>
 
-        {/* Login Dropdown - unchanged */}
+        {/* Login Dropdown */}
         <div 
           className="login-dropdown"
           onMouseEnter={() => setShowLogin(true)}
@@ -62,8 +74,18 @@ export default function Header() {
           <button className="login-btn">Login</button>
           {showLogin && (
             <div className="login-dropdown-menu">
-              <a className="login-dropdown-item" href="/author-login">Author Login</a>
-              <a className="login-dropdown-item" href="/reader-login">Reader Login</a>
+              <button 
+                className="login-dropdown-item" 
+                onClick={handleAuthorLogin}
+              >
+                Author Login
+              </button>
+              <button 
+                className="login-dropdown-item" 
+                onClick={handleReaderLogin}
+              >
+                Reader Login
+              </button>
             </div>
           )}
         </div>
